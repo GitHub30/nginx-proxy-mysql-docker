@@ -1,0 +1,97 @@
+
+proxy:
+    image: hrwebasst/mysql-proxy
+    volumes:
+        - /var/run/docker.sock:/tmp/docker.sock
+    ports:
+        - "3306:3306"
+demo1:
+    image: mysql
+    environment:
+        - MYSQL_DATABASE=demo1
+        - VIRTUAL_HOST=demo1.dev
+        - VIRTUAL_PORT=3301
+        - MYSQL_USER=demo
+        - MYSQL_PASSWORD=demo
+        - MYSQL_ROOT_PASSWORD=demo
+demo2:
+    image: mysql
+    environment:
+        - MYSQL_DATABASE=demo2
+        - VIRTUAL_HOST=demo2.dev
+        - VIRTUAL_PORT=3302
+        - MYSQL_USER=demo
+        - MYSQL_PASSWORD=demo
+        - MYSQL_ROOT_PASSWORD=demo
+demo3:
+    image: mysql
+    environment:
+        - MYSQL_DATABASE=demo3
+        - VIRTUAL_HOST=demo3.dev
+        - VIRTUAL_PORT=3303
+        - MYSQL_USER=demo
+        - MYSQL_PASSWORD=demo
+        - MYSQL_ROOT_PASSWORD=demo
+demo4:
+    image: mysql
+    environment:
+        - MYSQL_DATABASE=demo4
+        - VIRTUAL_HOST=demo4.dev
+        - VIRTUAL_PORT=3304
+        - MYSQL_USER=demo
+        - MYSQL_PASSWORD=demo
+        - MYSQL_ROOT_PASSWORD=demo
+demo5:
+    image: mysql
+    environment:
+        - MYSQL_DATABASE=demo5
+        - VIRTUAL_HOST=demo5.dev
+        - VIRTUAL_PORT=3305
+        - MYSQL_USER=demo
+        - MYSQL_PASSWORD=demo
+        - MYSQL_ROOT_PASSWORD=demo
+demo6:
+    image: mysql
+    environment:
+        - MYSQL_DATABASE=demo6
+        - VIRTUAL_HOST=demo6.dev
+        - VIRTUAL_PORT=3306
+        - MYSQL_USER=demo
+        - MYSQL_PASSWORD=demo
+        - MYSQL_ROOT_PASSWORD=demo
+demo7:
+    image: mysql
+    environment:
+        - MYSQL_DATABASE=demo7
+        - VIRTUAL_HOST=demo7.dev
+        - VIRTUAL_PORT=3307
+        - MYSQL_USER=demo
+        - MYSQL_PASSWORD=demo
+        - MYSQL_ROOT_PASSWORD=demo
+demo8:
+    image: mysql
+    environment:
+        - MYSQL_DATABASE=demo8
+        - VIRTUAL_HOST=demo8.dev
+        - VIRTUAL_PORT=3308
+        - MYSQL_USER=demo
+        - MYSQL_PASSWORD=demo
+        - MYSQL_ROOT_PASSWORD=demo
+demo9:
+    image: mysql
+    environment:
+        - MYSQL_DATABASE=demo9
+        - VIRTUAL_HOST=demo9.dev
+        - VIRTUAL_PORT=3309
+        - MYSQL_USER=demo
+        - MYSQL_PASSWORD=demo
+        - MYSQL_ROOT_PASSWORD=demo
+demo10:
+    image: mysql
+    environment:
+        - MYSQL_DATABASE=demo10
+        - VIRTUAL_HOST=demo10.dev
+        - VIRTUAL_PORT=3310
+        - MYSQL_USER=demo
+        - MYSQL_PASSWORD=demo
+        - MYSQL_ROOT_PASSWORD=demo
