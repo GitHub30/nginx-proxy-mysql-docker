@@ -9,10 +9,6 @@ RUN apt-get update \
  && apt-get clean \
  && rm -r /var/lib/apt/lists/*
 
-# Configure Nginx and apply fix for very long server names
-RUN echo "daemon off;" >> /etc/nginx/nginx.conf \
- && sed -i 's/^http {/&\n    server_names_hash_bucket_size 128;/g' /etc/nginx/nginx.conf
-
 # Install Forego
 RUN wget -P /usr/local/bin https://godist.herokuapp.com/projects/ddollar/forego/releases/current/linux-amd64/forego \
  && chmod u+x /usr/local/bin/forego
@@ -25,7 +21,8 @@ RUN wget https://github.com/jwilder/docker-gen/releases/download/$DOCKER_GEN_VER
 
 COPY . /app/
 WORKDIR /app/
-
+RUN cp /app/nginx.conf /etc/nginx/nginx.conf
+RUN echo '' > /etc/nginx/conf.d/default.conf
 EXPOSE 3306
 
 ENV DOCKER_HOST unix:///tmp/docker.sock
