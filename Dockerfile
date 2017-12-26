@@ -1,5 +1,5 @@
 FROM nginx:latest
-MAINTAINER Richard Silver hrwebasst@uoregon.edu
+MAINTAINER Tomofumi Inoue funaox@gmail.com
 
 # Install wget and install/updates certificates
 RUN apt-get update \
